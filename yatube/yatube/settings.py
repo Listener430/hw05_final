@@ -23,16 +23,13 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = "u!dqx-bstv-sg7pls2v5sykc+y%2-ve&=38cnmy2l6a)_3gegq"
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = [
-    "127.0.0.1",
-    "localhost",
-    "[::1]",
-    "testserver",
-    "www.Listener.pythonanywhere.com",
-    "Listener.pythonanywhere.com",
-]
+
+ALLOWED_HOSTS = ["84.201.140.144", "127.0.0.1", "localhost", "[::1]", "testserver"]
+
+
+
 
 
 # Application definition
