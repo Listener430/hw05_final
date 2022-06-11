@@ -25,7 +25,11 @@ SECRET_KEY = "u!dqx-bstv-sg7pls2v5sykc+y%2-ve&=38cnmy2l6a)_3gegq"
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
+
 ALLOWED_HOSTS = ["84.201.140.144", "127.0.0.1", "localhost", "[::1]", "testserver"]
+
+
+
 
 
 # Application definition
@@ -42,6 +46,7 @@ INSTALLED_APPS = [
     "core",
     "about",
     "sorl.thumbnail",
+    "debug_toolbar",
 ]
 
 MIDDLEWARE = [
@@ -52,6 +57,7 @@ MIDDLEWARE = [
     "django.contrib.auth.middleware.AuthenticationMiddleware",
     "django.contrib.messages.middleware.MessageMiddleware",
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
+    "debug_toolbar.middleware.DebugToolbarMiddleware",
 ]
 
 ROOT_URLCONF = "yatube.urls"
@@ -148,3 +154,7 @@ CACHES = {
         "BACKEND": "django.core.cache.backends.locmem.LocMemCache",
     }
 }
+
+INTERNAL_IPS = [
+    "127.0.0.1",
+]
